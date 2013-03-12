@@ -1,5 +1,5 @@
 static var selectedId : int;
-static var speed : double = .001;
+static var speed : int = 3;
  
 function Update () {
 
@@ -7,13 +7,12 @@ function Update () {
 	
     if (Input.GetKey (KeyCode.RightArrow)) transform.Translate (Vector3(-1,0,0) * Time.deltaTime*speed);
 
-    transform.Translate (Vector3(0,0,-1) * Time.deltaTime*speed);
+    if (Input.GetKey (KeyCode.UpArrow)) transform.Translate (Vector3(0,0,-1) * Time.deltaTime*speed);
     
-    if (speed < 5)
-    {
-    speed += .01;
-    }
+    if (Input.GetKey (KeyCode.DownArrow)) transform.Translate (Vector3(0,0,1) * Time.deltaTime*speed);
     
+  
+          
 
  
 }
