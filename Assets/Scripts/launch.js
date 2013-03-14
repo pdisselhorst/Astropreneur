@@ -1,5 +1,5 @@
 static var selectedId : int;
-static var speed : double = .001;
+static var speed : double = 10;
  
 function Update () {
 
@@ -9,12 +9,12 @@ function Update () {
 
     transform.Translate (Vector3(0,0,-1) * Time.deltaTime*speed);
     
-    if (speed < 5)
+    if (speed < 20)
     {
     speed += .01;
     }
  
-    if(transform.position.y > 65)
+    if(transform.position.y > -193)
     {
     print(" made it");
     Application.LoadLevel("leavingearth");

@@ -10,11 +10,7 @@ function Update () {
     if (Input.GetKey (KeyCode.UpArrow)) transform.Translate (Vector3(0,0,-1) * Time.deltaTime*speed);
     
     if (Input.GetKey (KeyCode.DownArrow)) transform.Translate (Vector3(0,0,1) * Time.deltaTime*speed);
-    
-  
-          
 
- 
 }
  
 function OnMouseDown () {
